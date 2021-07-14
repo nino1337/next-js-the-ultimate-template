@@ -1,0 +1,15 @@
+GET http://localhost:3000/api/livez HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/mocks/randomMythNames HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/mocks/RandomMythNames HTTP/1.1
+
+{
+  "exampleEmployeesBody": [{
+    "name": "Matthias Titze"
+  }]
+}
