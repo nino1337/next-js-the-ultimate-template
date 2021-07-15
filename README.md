@@ -94,3 +94,9 @@ To start in mock mode simply run
 An env var will be set, that changes axios baseURL to ```http://localhost:3000/api/mocks```. 
 
 If you now call ```http://localhost:3000/api/mocks/randomMythNames```, then a property with key *randomMythNames* is filtered out of the __mocks__/data.json and will be returned. 
+
+## Docker
+
+There is a Dockerfile gracefully copied from the nextjs-docs exists aswell. 
+
+You can build your container with ```docker build . -t my-next-js-app``` and run it with ```docker run -p 3000:3000 my-next-js-app```.
