@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) enriched with state of the art frameworks and features like typescript, storybook, emotion css, etc. See Features.
 
 ## Getting Started
 
@@ -14,21 +14,83 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/livez](http://localhost:3000/api/hlivez). This endpoint can be edited in `pages/api/livez.ts`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+### Next.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Homepage](https://nextjs.org/)
+- [Github Repository](https://github.com/vercel/next.js/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[Next.js](https://nextjs.org/) on the other hand is used as our server side renderer. It uses nodejs to render React on the server, so make sure to have a host, that can run node.
 
-## Deploy on Vercel
+### Typescript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Homepage](https://www.typescriptlang.org/)
+- [Github Repository](https://github.com/microsoft/TypeScript)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
+
+### Jest
+
+- [Homepage](https://jestjs.io/)
+- [Github Repository](https://github.com/facebook/jest)
+
+Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+
+### React-testing-library
+
+- [Homepage](https://testing-library.com/)
+- [Github Repository](https://github.com/testing-library)
+
+React Testing Library builds on top of DOM Testing Library by adding APIs for working with React components.
+
+### Emotion Css
+
+- [Homepage](https://emotion.sh/docs/introduction)
+- [Github Repository](https://github.com/emotion-js/emotion)
+
+Emotion is a library designed for writing css styles with JavaScript. It provides powerful and predictable style composition in addition to a great developer experience with features such as source maps, labels, and testing utilities. Both string and object styles are supported.
+
+### Tailwindcss
+
+- [Homepage](https://tailwindcss.com/)
+- [Github Repository](https://github.com/tailwindlabs/tailwindcss)
+
+A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup. As an addition, with the help of [xwind](https://github.com/Arthie/xwind) everything is prepared, that tailwind-classes can be written into styled-components, to make your react components more slim. Unfortunately due to the fact, that tailwindcss can now be jit-compiled, xwind is not working correctly. 
+
+### Storybook
+
+- [Homepage](https://storybook.js.org/)
+- [Github Repository](https://github.com/storybookjs/storybook)
+
+Open source tool for building UI components and pages in isolation. It streamlines UI development, testing, and documentation.
+
+### Eslint, Prettier, Husky, lint-staged
+
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Husky](https://github.com/typicode/husky#readme)
+
+Using eslint, prettier and husky gives us the ability to equal code standards and linting across the team.
+
+### Axios
+
+- [Github Repository](https://github.com/axios/axios) 
+
+Promise based HTTP client for the browser and node.js
+
+## Mock mode
+
+An out of the box working mock mode is implemented aswell, if your frontend is tightly coupled to an api, but where you also want to be able to start your app without the need of the api (e.g. the api is offline...). Make sure to adjust the response in the __mocks__ directory. 
+
+To start in mock mode simply run
+
+```yarn dev:mocks```
+
+An env var will be set, that changes axios baseURL to ```http://localhost:3000/api/mocks```. 
+
+If you now call ```http://localhost:3000/api/mocks/randomMythNames```, then a property with key *randomMythNames* is filtered out of the __mocks__/data.json and will be returned. 
