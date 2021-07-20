@@ -48,6 +48,13 @@ Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 
 React Testing Library builds on top of DOM Testing Library by adding APIs for working with React components.
 
+### Cypress
+
+- [Homepage](https://www.cypress.io/)
+- [Github Repository](https://github.com/cypress-io/cypress)
+
+Fast, easy and reliable testing for anything that runs in a browser.
+
 ### Emotion Css
 
 - [Homepage](https://emotion.sh/docs/introduction)
@@ -60,7 +67,7 @@ Emotion is a library designed for writing css styles with JavaScript. It provide
 - [Homepage](https://tailwindcss.com/)
 - [Github Repository](https://github.com/tailwindlabs/tailwindcss)
 
-A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup. As an addition, with the help of [xwind](https://github.com/Arthie/xwind) everything is prepared, that tailwind-classes can be written into styled-components, to make your react components more slim. Unfortunately due to the fact, that tailwindcss can now be jit-compiled, xwind is not working correctly. 
+A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup. As an addition, with the help of [xwind](https://github.com/Arthie/xwind) everything is prepared, that tailwind-classes can be written into styled-components, to make your react components more slim. Unfortunately due to the fact, that tailwindcss can now be jit-compiled, xwind is not working correctly.
 
 ### Storybook
 
@@ -79,24 +86,24 @@ Using eslint, prettier and husky gives us the ability to equal code standards an
 
 ### Axios
 
-- [Github Repository](https://github.com/axios/axios) 
+- [Github Repository](https://github.com/axios/axios)
 
 Promise based HTTP client for the browser and node.js
 
 ## Mock mode
 
-An out of the box working mock mode is implemented aswell, if your frontend is tightly coupled to an api, but where you also want to be able to start your app without the need of the api (e.g. the api is offline...). Make sure to adjust the response in the __mocks__ directory. 
+An out of the box working mock mode is implemented aswell, if your frontend is tightly coupled to an api, but where you also want to be able to start your app without the need of the api (e.g. the api is offline...). Make sure to adjust the response in the **mocks** directory.
 
 To start in mock mode simply run
 
-```yarn dev:mocks```
+`yarn dev:mocks`
 
-An env var will be set, that changes axios baseURL to ```http://localhost:3000/api/mocks```. 
+An env var will be set, that changes axios baseURL to `http://localhost:3000/api/mocks`.
 
-If you now call ```http://localhost:3000/api/mocks/randomMythNames```, then a property with key *randomMythNames* is filtered out of the __mocks__/data.json and will be returned. 
+If you now call `http://localhost:3000/api/mocks/randomMythNames`, then a property with key _randomMythNames_ is filtered out of the **mocks**/data.json and will be returned.
 
 ## Docker
 
-There is a Dockerfile gracefully copied from the nextjs-docs. 
+There is a Dockerfile gracefully copied from the nextjs-docs.
 
-You can build your container with ```docker build . -t my-next-js-app``` and run it with ```docker run -p 3000:3000 my-next-js-app```.
+You can build your container with `docker build . -t my-next-js-app` and run it with `docker run -p 3000:3000 my-next-js-app`.

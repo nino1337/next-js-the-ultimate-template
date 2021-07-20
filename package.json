@@ -11,7 +11,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest --coverage",
-    "test:watch": "yarn test -- --watch"
+    "test:watch": "yarn test -- --watch",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
@@ -41,7 +43,9 @@
     "autoprefixer": "^10.2.6",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
+    "chai-colors": "^1.0.1",
     "cross-env": "^7.0.3",
+    "cypress": "^7.7.0",
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",

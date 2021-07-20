@@ -2,16 +2,14 @@ import { AxiosRequestConfig } from 'axios';
 import { useState, useEffect, useRef } from 'react';
 import instance from '../config/axios';
 
-interface State {
+interface State<T> {
   loading: boolean;
   error: boolean;
-  data: any;
+  data: T;
 }
 
-type UseFetchType = (config: AxiosRequestConfig) => State;
-
-const useFetch: UseFetchType = config => {
-  const [state, setState] = useState<State>({
+const useFetch = <T>(config: AxiosRequestConfig): State<T> => {
+  const [state, setState] = useState<State<T>>({
     loading: true,
     error: false,
     data: null,
@@ -36,7 +34,7 @@ const useFetch: UseFetchType = config => {
       });
   }, []);
 
-  return { ...state };
+  return state;
 };
 
 export default useFetch;
