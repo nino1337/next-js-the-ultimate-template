@@ -25,7 +25,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - [Homepage](https://nextjs.org/)
 - [Github Repository](https://github.com/vercel/next.js/)
 
-[Next.js](https://nextjs.org/) on the other hand is used as our server side renderer. It uses nodejs to render React on the server, so make sure to have a host, that can run node.
+Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
 
 ### Typescript
 
