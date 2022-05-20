@@ -10,7 +10,7 @@ export default function Home() {
   const handleButtonClick = () => {
     setButtonType(prevButtonType => {
       if (prevButtonType === 'primary') return 'secondary';
-      else return 'primary';
+      return 'primary';
     });
   };
 
