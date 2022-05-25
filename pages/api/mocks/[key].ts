@@ -7,7 +7,7 @@ const mockController = (req: NextApiRequest, res: NextApiResponse) => {
     query: { key },
     method,
   } = req;
-  const data = mockData[`${key}`];
+  const data = mockData[key];
 
   switch (method) {
     case 'GET':
